@@ -49,20 +49,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="h-screen flex items-center justify-center">
+      <main className="h-screen flex items-center justify-center overflow-hidden">
         <form
           onSubmit={formik.handleSubmit}
-          className="bg-white flex rounded-lg w-1/2 font-latoRegular"
+          className="bg-white flex rounded-lg w-full sm:w-3/4 xl:w-2/3 font-latoRegular h-screen sm:h-5/6"
         >
-          <div className="flex-1 text-gray-700 p-20">
-            <h1 className="text-3xl pb-2 font-latoBold">
+          <div className="flex-1 text-gray-700 p-8 xl:p-20">
+            <h1 className="text-3xl sm:text-xl md:text-2xl xl:text-3xl text-center sm:text-left pb-1 lg:pb-2 font-latoBold">
               Let's get started 👋
             </h1>
-            <p className="text-lg text-gray-500">
+            <p className="text-lg sm:text-sm md:text-base xl:text-lg text-center sm:text-left text-gray-500">
               Join our E-learning platform today and unblock over 500+ courses
               and digital assets ready to download.
             </p>
-            <div className="mt-6">
+            <div className="mt-6 sm:mt-3 md:mt-5 lg:mt-6">
               {/* Name input field */}
               <div className="pb-4">
                 <label
@@ -78,7 +78,7 @@ export default function Home() {
                     : "Name"}
                 </label>
                 <input
-                  className="border-2 border-gray-500 p-2 rounded-md w-1/2 focus:border-teal-500 focus:ring-teal-500"
+                  className="border-2 border-gray-500 p-2 rounded-md w-full sm:w-3/4 lg:w-2/3 xl:w-1/2 focus:border-teal-500 focus:ring-teal-500"
                   type="text"
                   name="name"
                   value={formik.values.name}
@@ -102,7 +102,7 @@ export default function Home() {
                     : "Email"}
                 </label>
                 <input
-                  className="border-2 border-gray-500 p-2 rounded-md w-1/2 focus:border-teal-500 focus:ring-teal-500"
+                  className="border-2 border-gray-500 p-2 rounded-md w-full sm:w-3/4 lg:w-2/3 xl:w-1/2 focus:border-teal-500 focus:ring-teal-500"
                   type="email"
                   name="email"
                   value={formik.values.email}
@@ -120,7 +120,7 @@ export default function Home() {
                   Country
                 </label>
                 <select
-                  className="border-2 border-gray-500 p-2 rounded-md w-1/2 focus:border-teal-500 focus:ring-teal-500"
+                  className="border-2 border-gray-500 p-2 rounded-md w-full sm:w-3/4 lg:w-2/3 xl:w-1/2 focus:border-teal-500 focus:ring-teal-500"
                   name="country"
                   value={formik.values.country}
                   onChange={formik.handleChange}
@@ -161,13 +161,13 @@ export default function Home() {
               </div>
               <button
                 type="submit"
-                className="bg-teal-500 font-latoBold text-sm text-white py-3 mt-6 rounded-lg w-full"
+                className="bg-teal-500 font-latoBold text-sm text-white py-3 mt-6 sm:mt-3 xl:mt-6 rounded-lg w-full"
               >
                 Start learning today!
               </button>
             </div>
           </div>
-          <div className="relative flex-1">
+          <div className="relative flex-1 hidden sm:flex">
             <Image
               alt="form-learn"
               src={formImage}
